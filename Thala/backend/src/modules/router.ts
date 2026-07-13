@@ -1,0 +1,34 @@
+import { Router } from 'express';
+import authRoutes from './auth/auth.routes';
+import usersRoutes from './users/users.routes';
+import activitiesRoutes from './activities/activities.routes';
+import heartRateRoutes from './heartrate/heartrate.routes';
+import historyRoutes from './history/history.routes';
+import workoutsRoutes from './workouts/workouts.routes';
+import sportsRoutes from './sports/sports.routes';
+import nutritionRoutes from './nutrition/nutrition.routes';
+import analyticsRoutes from './analytics/analytics.routes';
+import achievementsRoutes from './achievements/achievements.routes';
+import challengesRoutes from './challenges/challenges.routes';
+import communityRoutes from './community/community.routes';
+import notificationsRoutes from './notifications/notifications.routes';
+import reportsRoutes from './reports/reports.routes';
+import adminRoutes from './admin/admin.routes';
+
+export const apiRouter = Router();
+
+apiRouter.use('/auth', authRoutes);
+apiRouter.use('/users', usersRoutes);
+apiRouter.use('/activities', activitiesRoutes);
+apiRouter.use('/heart-rate', heartRateRoutes);
+apiRouter.use('/history', historyRoutes);
+apiRouter.use('/workouts', workoutsRoutes);
+apiRouter.use('/sports', sportsRoutes);
+apiRouter.use('/nutrition', nutritionRoutes);
+apiRouter.use('/analytics', analyticsRoutes);
+apiRouter.use('/achievements', achievementsRoutes);
+apiRouter.use('/challenges', challengesRoutes);
+apiRouter.use('/community', communityRoutes);
+apiRouter.use('/notifications', notificationsRoutes);
+apiRouter.use('/reports', reportsRoutes);
+apiRouter.use('/admin', adminRoutes);

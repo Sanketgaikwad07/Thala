@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "Thala Fitness",
+    "slug": "thala-fitness",
+    "scheme": "thalafitness",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f8a58"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.thala.fitness",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Thala uses your location to track your running, cycling and walking routes on the map.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Thala uses your location in the background to keep tracking your activity route when the app is minimized.",
+        "UIBackgroundModes": ["location", "fetch"]
+      }
+    },
+    "android": {
+      "package": "app.thala.fitness",
+      "adaptiveIcon": {
+        "backgroundColor": "#0f8a58",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACTIVITY_RECOGNITION",
+        "POST_NOTIFICATIONS",
+        "CAMERA"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Thala uses your location to track your running, cycling and walking routes on the map."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#0f8a58"
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "extra": {
+      "apiBaseUrl": "http://192.168.0.34:4000/api/v1",
+      "googleWebClientId": "YOUR_GOOGLE_OAUTH_WEB_CLIENT_ID"
+    }
+  }
+}
